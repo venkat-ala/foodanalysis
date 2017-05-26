@@ -54,6 +54,7 @@ public class UserController {
 		return "index";
 	}
 
+	//This method used for user registartion
 	@RequestMapping(value = "/usrregistration", method = RequestMethod.GET)
 	public String registration(@RequestParam(required = false) String page, Model model) {
 		model.addAttribute("user", new User());
@@ -61,6 +62,7 @@ public class UserController {
 		return "userRegistration";
 	}
 
+	//This method used for user login view
 	@RequestMapping(value = "/userloginview", method = RequestMethod.GET)
 	public String login(@RequestParam(required = false) String page, Model model) {
 		if ("admin".equals(page)) {
@@ -69,6 +71,7 @@ public class UserController {
 		return "userLogin";
 	}
 
+	//This method used for get user login details
 	@RequestMapping(value = "/userprofile/{id}", method = RequestMethod.GET)
 	public String gotoUserProfile(@PathVariable int id, Model model, @RequestParam(required = false) String page) {
 		User user = null;
