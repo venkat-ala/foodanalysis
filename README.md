@@ -8,5 +8,6 @@
      # mvn eclipse:eclipse -Dwtpversion=2.0
 
 4=>Now in eclipse import as existing project
+
 5=> After importing it,right click on the project goto properties-> project facets change the java version to 1.8 
     and targeted runtime to Tomcat8
